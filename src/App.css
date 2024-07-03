@@ -1,0 +1,174 @@
+/* Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+
+nav {
+    background-color: #f7ce31;
+}
+
+.navBtn:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+}
+
+select {
+    background-color: #ffc700;
+}
+
+/* Input Search */
+
+.inputSearch {
+    border-bottom: 5px solid #000;
+    transition: height 200ms;
+    height: 5rem;
+}
+
+.show {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height 200ms;
+}
+
+/* Slider */
+
+.slider {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 80%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    pointer-events: none;
+}
+
+.slide-img {
+    height: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 3rem;
+}
+
+h2 {
+    transition: 0.3s all ease;
+}
+h2:hover {
+    color: #717171;
+    transition: 0.3s all ease-in-out;
+}
+h2 span {
+    color: #000;
+}
+h2:hover span {
+    color: black;
+}
+
+/* Image Ten */
+
+.image-container {
+    margin: 0 20px;
+    position: relative;
+    width: 300px; /* Adjust based on your image size */
+    height: 400px; /* Adjust based on your image size */
+}
+
+.category-container {
+    margin: 0 20px;
+    position: relative;
+    width: 300px; /* Adjust based on your image size */
+    height: 400px; /* Adjust based on your image size */
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hover-image {
+    opacity: 0;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.image-container:hover .image:not(.hover-image) {
+    opacity: 0;
+}
+
+/* Footer */
+
+footer {
+    background-color: #ffc700;
+}
+
+.footerBtn {
+    background-color: #10a958;
+    border-radius: 100%;
+    width: 100%;
+}
+
+/* Marquee Animation */
+
+.marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.marquee__slider {
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
+    padding: 5px;
+    animation: marquee linear 5s infinite;
+}
+
+.marquee__slider span {
+    margin: 0px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* UTIls */
+
+/* #ffc700 #10a958 #000000 #fff */
