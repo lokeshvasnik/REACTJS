@@ -15,6 +15,8 @@ const Home = () => {
         arrows: false,
     };
 
+    console.log();
+
     return (
         <div>
             <section className="bg-[#F7CE31] border-b-8 border-black py-10">
@@ -64,7 +66,7 @@ const Home = () => {
                 </Slider>
             </section>
             <section className="p-10 my-10">
-                <h2 className="cursor-pointer text-6xl font-bold text-center leading-tight">
+                <h2 className="cursor-pointer  text-2xl md:text-6xl font-bold text-center leading-tight">
                     FIGMA&apos;S{" "}
                     <i
                         className="bx bxs-balloon"
@@ -97,27 +99,29 @@ const Home = () => {
                 </h2>
             </section>
 
-            <section className="flex py-10 justify-center">
+            <section className="flex py-10 justify-center items-center flex-col md:flex-row">
                 {categories.map((category) => (
                     <div key={category}>
                         <Link
                             to={`/category/${category}`}
                             className="text-center"
                         >
-                            <div className="image-container cursor-pointer">
-                                {/* Replace with actual images from your data */}
-                                <img
-                                    src="https://store.figma.com/cdn/shop/files/20240619_Figma_Store_5116_859eaff4-b3e6-4bd7-84cd-3c82f1b66a4d_1000x.jpg?v=1719507726"
-                                    alt="Image 1"
-                                    className="image rounded-lg"
-                                />
+                            {
+                                <div className="home-image-container cursor-pointer">
+                                    {/* Replace with actual images from your data */}
+                                    <img
+                                        src="https://store.figma.com/cdn/shop/files/20240619_Figma_Store_5116_859eaff4-b3e6-4bd7-84cd-3c82f1b66a4d_1000x.jpg?v=1719507726"
+                                        alt="Image 1"
+                                        className="home-image rounded-lg"
+                                    />
 
-                                <img
-                                    src="https://store.figma.com/cdn/shop/files/37_8a934c54-da56-46b1-b522-a63e062140cf_1000x.png?v=1719338623"
-                                    alt="Image 2"
-                                    className="image rounded-lg hover-image"
-                                />
-                            </div>
+                                    <img
+                                        src="https://store.figma.com/cdn/shop/files/37_8a934c54-da56-46b1-b522-a63e062140cf_1000x.png?v=1719338623"
+                                        alt="Image 2"
+                                        className="home-image rounded-lg hover-image"
+                                    />
+                                </div>
+                            }
                             <div className="px-5 my-5">
                                 <div>CATEGORY</div>
                                 <p className="font-bold uppercase">

@@ -10,21 +10,21 @@ const Footer = () => {
     }
     return (
         <footer className="mt-10 py-5">
-            <div className="grid gap-4 grid-cols-3 grid-rows-2 px-10 items-center justify-center">
-                <div className="col-span-1 md:col-span-1">
-                    <ul className="flex justify-center items-center flex-col text-4xl space-y-2 font-semibold border rounded-full">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-3 px-10 items-center justify-center">
+                <div className="col-span-1 flex justify-center md:justify-start">
+                    <ul className="flex justify-center items-center flex-col text-2xl md:text-4xl space-y-2 font-semibold border p-4 rounded-full">
                         <li>THE</li>
                         <li>FIGMA</li>
                         <li>STORE</li>
                     </ul>
                 </div>
-                <div className="col-span-1 md:col-span-1 flex">
-                    <h1 className="text-3xl font-bold">
+                <div className="col-span-1 flex justify-center md:justify-center text-center md:text-left">
+                    <h1 className="text-xl md:text-3xl font-bold">
                         OBJECTS <br /> THAT INSPIRE.
                     </h1>
                 </div>
-                <div className="col-span-1 md:col-span-1">
-                    <ul className="text-lg space-y-2 font-semibold">
+                <div className="col-span-1 flex justify-center md:justify-end">
+                    <ul className="text-sm md:text-lg space-y-2 font-semibold text-center md:text-right">
                         <li>
                             <a href="#faq" className="hover:underline">
                                 FAQ
@@ -47,9 +47,8 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                {/* <!-- Social Links --> */}
-                <div className="flex">
-                    <div className="flex space-x-10 text-3xl ml-40 ">
+                <div className="col-span-1 md:col-span-3 flex flex-col md:flex-row justify-center md:justify-between items-center mt-5 md:mt-10">
+                    <div className="flex space-x-4 md:space-x-10 text-sm md:text-3xl">
                         <li className="hover:underline cursor-pointer list-none">
                             FIGMA
                         </li>
@@ -63,8 +62,12 @@ const Footer = () => {
                             YOUTUBE
                         </li>
                     </div>
-                    <button id="scrollToTopBtn" className="footerBtn ml-80 p-3">
-                        <ArrowUp onClick={topBtnHandler} />
+                    <button
+                        id="scrollToTopBtn"
+                        className="p-3 bg-black rounded-full mt-3"
+                        onClick={topBtnHandler}
+                    >
+                        <ArrowUp color="#fff" />
                     </button>
                 </div>
             </div>
@@ -77,7 +80,7 @@ const Footer = () => {
                     <span>OUR</span>
                     <span>TIME</span>
                     <span>ON</span>
-                    <span>FIGMA'S</span>
+                    <span>FIGMA&apos;S</span>
                     <span>MARVELOUSLY</span>
                 </div>
                 <div className="marquee__slider">
@@ -88,7 +91,7 @@ const Footer = () => {
                     <span>OUR</span>
                     <span>TIME</span>
                     <span>ON</span>
-                    <span>FIGMA'S</span>
+                    <span>FIGMA&apos;S</span>
                     <span>MARVELOUSLY</span>
                 </div>
                 <div className="marquee__slider">
@@ -99,7 +102,7 @@ const Footer = () => {
                     <span>OUR</span>
                     <span>TIME</span>
                     <span>ON</span>
-                    <span>FIGMA'S</span>
+                    <span>FIGMA&apos;S</span>
                     <span>MARVELOUSLY</span>
                 </div>
             </div>

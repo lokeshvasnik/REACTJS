@@ -7,26 +7,34 @@ const Category = () => {
     const categoryProducts = products[0][categoryName] || [];
 
     return (
-        <section className="flex py-10 justify-center">
+        <section className="py-10  md:flex md:justify-evenly md:items-center">
             {categoryProducts.map((category) => (
-                <Link to="/product" key={category.id}>
-                    <div className="category-container cursor-pointer">
-                        {/* Replace with actual images from your data */}
-                        <img
-                            src={category.thumbnail}
-                            alt="Image 1"
-                            className="image rounded-lg"
-                        />
+                <Link
+                    to={`/product/${categoryName}/${category.id}`}
+                    key={category.id}
+                    className="md:flex md:flex-col "
+                >
+                    <div>
+                        <div className="category-container cursor-pointer ">
+                            {/* Replace with actual images from your data */}
+                            <img
+                                src={category.thumbnail}
+                                alt="Image 1"
+                                className="image rounded-lg md:w-72"
+                            />
 
-                        {/* <img
+                            {/* <img
                             src="https://store.figma.com/cdn/shop/files/37_8a934c54-da56-46b1-b522-a63e062140cf_1000x.png?v=1719338623"
                             alt="Image 2"
                             className="image rounded-lg hover-image"
                         /> */}
-                    </div>
-                    <div className="px-5 my-5 flex justify-between">
-                        <p className="font-bold text-lg">{category.title}</p>
-                        <p className="">Rs {category.price}</p>
+                        </div>
+                        <div className="my-5 flex justify-between mx-9 md:mx-auto">
+                            <p className="font-bold text-md">
+                                {category.title}
+                            </p>
+                            <p className="">Rs {category.price}</p>
+                        </div>
                     </div>
                 </Link>
             ))}
